@@ -20,6 +20,7 @@ services:
     image:
       gutenberg/config-server
     volumes:
+      # edit to match your own filesystem
       - type: bind
         source: /home/dominique/workspace-gutenberg-compass-publish4/gutenberg-compass-config-repo
         target: /tmp/config-repo
