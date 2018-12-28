@@ -62,7 +62,7 @@ zuul-server
 admin-server
 frontend-server
 
-run the command: `mvn clean package docker:build`
+run the command: `[sudo] mvn clean package docker:build`
 
 This will create the 9 Spring images. The remaining non Spring images will be pulled from a Docker repository.
 
