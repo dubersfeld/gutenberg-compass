@@ -58,7 +58,7 @@ book-server
 review-server
 order-server
 user-server
-gutenberg/gateway
+zuul-server
 admin-server
 frontend-server
 
