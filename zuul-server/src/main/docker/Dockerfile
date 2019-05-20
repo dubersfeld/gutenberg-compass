@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 
-ADD zuul-server-0.1.0-SNAPSHOT.jar app.jar
+ADD zuul-service-0.1.0-SNAPSHOT.jar app.jar
 
 EXPOSE 5555
 

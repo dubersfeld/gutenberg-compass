@@ -199,7 +199,7 @@ public class OrderController {
 				model.addAttribute("placed", placed);
 				model.addAttribute("denied", !placed);
 				if (placed) {// success
-					// add actual shipping address to order before persisting
+					// add actual shipping address and date to order before persisting
 					
 					orderService.finalizeOrder(order, shipAdd, payMeth);
 					

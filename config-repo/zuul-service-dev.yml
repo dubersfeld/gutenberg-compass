@@ -30,7 +30,7 @@ zuul:
     
     users-by-address:
       path: /users-by-address/**
-      url: http://user-server:8084/
+      url: http://user-service:8084/
     users-by-service:
       path: /users-by-service/**
       serviceId: user-service

@@ -1,4 +1,4 @@
-package com.dub.hello;
+package com.dub.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

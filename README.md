@@ -16,13 +16,13 @@ Server            | Image                     | Port         | Function         
 ---------------   | ------------------------- | ------------ | -------------------- | -------------------
 rabbitmq-server   | rabbitmq:3-management     | 15672, 5672  | Messaging broker     | 
 gutenberg-config  | gutenberg/config-server   | 8888         | Configuration server | None
-gutenberg-eureka  | gutenberg/eureka-service  | 8761         | Discovery server     | None
+gutenberg-eureka  | gutenberg/eureka-server   | 8761         | Discovery server     | None
 books-mongodb     | mongo                     | 27017        | Schemaless database  |
 book-service      | gutenberg/book-server     | 8081         | Book requests        | booksonline
 review-service    | gutenberg/review-server   | 8082         | Review requests      | booksonline
 order-service     | gutenberg/order-server    | 8083         | Order requests       | booksonline
 user-service      | gutenberg/user-server     | 8084         | User requests        | booksonline
-gutenberg-gateway | gutenberg/zuul-server     | 5555         | Gateway              | None
+zuul-service      | gutenberg/zuul-server     | 5555         | Gateway              | None
 admin-service     | gutenberg/admin           | 9090         | admin server         | booksonline
 redis-service     | redis                     | 6379         | Cache                | None
 frontend-service  | gutenberg/frontend-server | 8080         | frontend             | None
@@ -53,7 +53,7 @@ Here are the steps to run the application:
 In each of the 9 project subdirectories:
 
 config-server
-eureka-service
+eureka-server
 book-server
 review-server
 order-server

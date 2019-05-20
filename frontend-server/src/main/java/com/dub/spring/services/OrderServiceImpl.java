@@ -32,8 +32,8 @@ public class OrderServiceImpl implements OrderService {
 	@Autowired
 	private RestOperations restTemplate;
 		
-	@Autowired
-	private BookService bookService;
+	//@Autowired
+	//private BookService bookService;
 	
 	@Autowired
 	private ServiceConfig serviceConfig;

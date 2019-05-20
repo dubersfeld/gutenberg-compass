@@ -24,7 +24,7 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public BookDocument setBookPrice(String bookId, int price) {
 		Optional<BookDocument> book = bookRepository.findById(bookId);
-		
+			
 		if (book.isPresent()) {
 			BookDocument thisBook = book.get();
 			thisBook.setPrice(price); 

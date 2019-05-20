@@ -23,7 +23,6 @@ public class OrderBase implements Serializable {
 	private Address shippingAddress;
 	private PaymentMethod paymentMethod;
 	private int subtotal;
-	
 	private Date date;
 	
 	public OrderBase() {
@@ -39,6 +38,7 @@ public class OrderBase implements Serializable {
 		this.shippingAddress = that.shippingAddress;
 		this.paymentMethod = that.paymentMethod;
 		this.subtotal = that.subtotal;
+		this.date = that.date;
 	}
 
 	

@@ -22,7 +22,7 @@ services:
     volumes:
       # edit to match your own filesystem
       - type: bind
-        source: /home/dominique/gutenberg-compass/config-repo
+        source: /home/ubersfeld/Documents/gutenberg-compass/config-repo
         target: /tmp/config-repo
     ports:
       - 8888:8888
@@ -30,7 +30,7 @@ services:
   # gutenberg-eureka 
   gutenberg-eureka:
     image:
-      gutenberg/eureka-service
+      gutenberg/eureka-server
     ports:
       # host:container
       - 8761:8761
@@ -133,25 +133,6 @@ services:
       - GUTENBERG_CONFIG_URI=http://gutenberg-config:8888
       - PROFILE=dev
 
-  # admin-service
-  admin-service:
-    image: gutenberg/admin-server
-    depends_on:
-      - gutenberg-config
-      - books-mongodb
-    ports:
-      # host:container
-      - 9090:9090
-    environment:
-      - CONFIGSERVER_HOST=gutenberg-config
-      - CONFIGSERVER_PORT=8888
-      - BOOKSERVER_HOST=book-service
-      - BOOKSERVER_PORT=8081
-      - ORDERSERVER_HOST=order-service
-      - ORDERSERVER_PORT=8083
-      - GUTENBERG_CONFIG_URI=http://gutenberg-config:8888
-      - PROFILE=dev
-
   # redis-service
   redis-service:
     image: redis
@@ -186,6 +167,24 @@ services:
       - GUTENBERG_CONFIG_URI=http://gutenberg-config:8888
       - PROFILE=dev
 
+  # admin-service
+  admin-service:
+    image: gutenberg/admin-server
+    depends_on:
+      - gutenberg-config
+      - books-mongodb
+    ports:
+      # host:container
+      - 9090:9090
+    environment:
+      - CONFIGSERVER_HOST=gutenberg-config
+      - CONFIGSERVER_PORT=8888
+      - BOOKSERVER_HOST=book-service
+      - BOOKSERVER_PORT=8081
+      - ORDERSERVER_HOST=order-service
+      - ORDERSERVER_PORT=8083
+      - GUTENBERG_CONFIG_URI=http://gutenberg-config:8888
+      - PROFILE=dev
 
 
 volumes:

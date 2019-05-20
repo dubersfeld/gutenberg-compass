@@ -30,13 +30,6 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserService userService;
 	
-	
-	@Bean
-	public DefaultWebSecurityExpressionHandler webSecurityExpressionHandler() {
-	    	return new DefaultWebSecurityExpressionHandler();
-	}
-	
-
 	@Lazy
 	@Bean
 	@Override
